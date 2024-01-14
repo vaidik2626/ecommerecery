@@ -3,7 +3,7 @@
 import { GlobalContext } from "@/context";
 import { adminNavOptions, navOptions } from "@/utils";
 import { Fragment, useContext, useEffect } from "react";
-//import CommonModal from "../CommonModal";
+import CommonModal from "../components/commonmodel/index";
 import Cookies from "js-cookie";
 import { usePathname, useRouter } from "next/navigation";
 //import CartModal from "../CartModal";
@@ -175,7 +175,7 @@ export default function Navbar() {
           <NavItems router={router} isAdminView={isAdminView} />
         </div>
       </nav>
-     {/*} <CommonModal
+      <CommonModal
         showModalTitle={false}
         mainContent={
           <NavItems
@@ -187,7 +187,7 @@ export default function Navbar() {
         show={showNavModal}
         setShow={setShowNavModal}
       />
-      {showCartModal && <CartModal />}*/}
+      {showCartModal && <CartModal />}
     </>
   );
 }
