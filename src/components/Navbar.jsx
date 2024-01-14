@@ -6,7 +6,7 @@ import { Fragment, useContext, useEffect } from "react";
 import CommonModal from "../components/commonmodel/index";
 import Cookies from "js-cookie";
 import { usePathname, useRouter } from "next/navigation";
-//import CartModal from "../CartModal";
+import CartModal from "../components/cartmodel/index";
 
 function NavItems({ isModalView = true, isAdminView, router }) {
   return (
@@ -62,6 +62,7 @@ export default function Navbar() {
   const router = useRouter();
 
   console.log(currentUpdatedProduct, "navbar");
+  console.log(showNavModal);
 
   useEffect(() => {
     if (
